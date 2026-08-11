@@ -5,8 +5,23 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons';
 import { faRobot } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
 import idTECHLOGO from './images/idtechlogo.png';
+import gameDESIGN from './images/firstclass.png';
+import vrDESIGN from './images/vrimage.png';
+import mineCRAFT from './images/mcimage.png';
+import vrHORROR from './images/vrimage2.png';
+import cDESIGN from './images/c++gd.png';
+import pythonGAME from './images/python.png';
+import nvidiaAI from './images/nvidia.png';
+import sideWALK from './images/jetsonniv.png';
+import jediSURVIVOR from './images/pythonrpg.webp';
+import pixelGAME from './images/pixelSTARS.png';
+import tntAUDIO from './audio/TNT.mp3';
+import backinblackAUDIO from './audio/back in black.mp3';
+
+
 
 function Home(){
 
@@ -29,6 +44,10 @@ function Home(){
 
     function gotoAudio(){
         document.getElementById("acdcaudio").scrollIntoView({behavior: "smooth"});
+    }
+
+    function gotoContact(){
+        document.getElementById("contactme").scrollIntoView({behavior: "smooth"});
     }
 
     const submit_form = async (e) => {
@@ -73,6 +92,11 @@ function Home(){
                 <button className="navigation" onClick={gotoAudio}>
                     AC<FontAwesomeIcon icon={faBoltLightning}/>DC
                 </button>
+
+                <button className="navigation" onClick={gotoContact}>
+                    <FontAwesomeIcon icon={faPhone} /> Contact
+                </button>
+
             </div>
             
         </div>
@@ -88,7 +112,11 @@ function Home(){
         </div>
 
 
-
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
 
         <div id="idtechyears" className="timeatidtech">
 
@@ -102,39 +130,45 @@ function Home(){
         </div>
 
         <div style={{ width: '80%' }} className="firsttime">
-            <img className="gdimage" src="src/images/firstclass.png "/>
+            <img className="gdimage" src={gameDESIGN}/>
             <p style={{color: 'white', fontSize: '26px'}}> My first year at iD Tech was making me nervous because obviously this was my first year. The class I took was "Game Design 101". I do remember that it was a very fun class to be in, the instructor was great, the people were fun and I learned a lot. </p>
         </div>
 
         <div style={{ width: '80%' }} className="firsttime">
             <p style={{color: 'white', fontSize: '26px'}}>Now my second year was very different. It was "VR Game design with Unity and Meta Quest". I don't remember much from that particular year other than the instructor taught me so much stuff so I was able to make a game at my own house with my own stuff.</p>
-            <img className="gdimage" src="src/images/vrimage.png"/>
+            <img className="gdimage" src={vrDESIGN}/>
         </div>
 
         <div style={{ width: '80%' }} className="firsttime">
-            <img className="gdimage" src="src/images/mcimage.png"/>
+            <img className="gdimage" src={mineCRAFT}/>
             <p style={{color: 'white', fontSize: '26px'}}>For my third year I took the class of "Advanced Minecraft Modding with Java". Now that I can remember, it was such a fun class to be in along with the instructor and the kids. I took the advanced version and it was definitley up there in terms of modding capability. It was challenging at times but I was able to get through it fairly easily.</p>
         </div>
 
         <div style={{ width: '80%' }} className="firsttime">
             <p style={{color: 'white', fontSize: '26px'}}>The 4th time of iD Tech I took another VR game design class because I couldn't get enough of it the first time. It was pretty much the same as the first one I took other than new people and a new instructor which was perfectly fine.</p>
-            <img className="gdimage" src="src/images/vrimage2.png"/>
+            <img className="gdimage" src={vrHORROR}/>
         </div>
 
         <div style={{ width: '80%' }} className="firsttime">
-            <img className="gdimage" src="src/images/c++gd.png"/>
+            <img className="gdimage" src={cDESIGN}/>
             <p style={{color: 'white', fontSize: '26px'}}>The 5th time at iD Tech was very different. This time it was a teen academy which is the one in Stanford that you stay in the dorms for about 2 weeks. It counts as 2 times of iD Tech which was nice. That time I took the class called "Game Coding Academy with C++". That one was very nice because it gave so much more time to focus on doing what you want instead of having to rush the project like the regular tech camps.</p>
         </div>
 
         <div style={{ width: '80%' }} className="firsttime">
             <p style={{color: 'white', fontSize: '26px'}}>The 6th time was my final tech camp I could do because I aged out of the tech camps. The class I took was "Python Coding & AI Agents". It was an overall well rounded class. It definitley helped me with finding jobs in the future by now knowing somewhat about how ai works and what it actually is.</p>
-            <img className="gdimage" src="src/images/python.png"/>
+            <img className="gdimage" src={pythonGAME}/>
         </div>
 
         <div style={{ width: '80%' }} className="firsttime">
-            <img className="gdimage" src="src/images/nvidia.png"/>
+            <img className="gdimage" src={nvidiaAI}/>
             <p style={{color: 'white', fontSize: '26px'}}>The 7th time had to be one of my favourites. It helped me the most with developing my own ai system and using the given technology from nvidia. I really recommend this course to people looking for ai courses.</p>
         </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
 
 
          <div id="idprojects" className="timeatidtech">
@@ -150,7 +184,7 @@ function Home(){
 
         <div className="Projects">
             <div>
-                <img width="600px" height="600px" src="src/images/jetsonniv.png"/>
+                <img width="600px" height="600px" src={sideWALK}/>
                 <h1>AI Sidewalk Analyzer</h1>
                 <p>It analyzes sidewalks and roads to differentiate them from each other so that people with poor vision can know when they are about to step out on the road.</p>
                 <br/>
@@ -160,7 +194,7 @@ function Home(){
             </div>
 
             <div>
-                <img width="600px" height="600px" src="src/images/pythonrpg.webp"/>
+                <img width="600px" height="600px" src={jediSURVIVOR}/>
                 <h1>Star Wars: Jedi Survivor RPG</h1>
                 <p>The project was based off of Jedi Survivor. It's an rpg game coded in Python that used aspects of Jedi Survivor to make a full functioning and fun Star Wars game.</p>
                 <br/>
@@ -170,7 +204,7 @@ function Home(){
             </div>
 
             <div>
-                <img width="600px" height="600px" src="src/images/pixelSTARS.png"/>
+                <img width="600px" height="600px" src={pixelGAME}/>
                 <h1>Pixel Art Star Wars Game</h1>
                 <p>This project was a top down star wars game. You had to fight through waves of enemies to get to the next level. The more you went on the harder it got.</p>
                 <br/>
@@ -180,6 +214,12 @@ function Home(){
             </div>
         
         </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
 
 
          <div id="acdcaudio" className="timeatidtech">
@@ -197,7 +237,7 @@ function Home(){
 
              <h1>T.N.T</h1>
             <audio style={{ backgroundColor: 'black' }} controls loop>
-                <source src="src/audio/TNT.mp3"></source>
+                <source src={tntAUDIO}></source>
             </audio>
 
         </div>
@@ -205,10 +245,24 @@ function Home(){
         <div className="audio"> 
             <h1>Back in Black</h1>
             <audio controls loop>
-                <source src="src/audio/back in black.mp3"></source>
+                <source src={backinblackAUDIO}></source>
             </audio>
         </div>
-
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         <div id='contactme' style={{display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
             <h1 style={{fontSize: '80px'}}>Contact me for any further questions!</h1>
             <br/>
