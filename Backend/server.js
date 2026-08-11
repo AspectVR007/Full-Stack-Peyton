@@ -34,6 +34,8 @@ app.get('/test', (req, res) => {
 
 
 app.post('/sendmail', async (req, res) => {
+
+    
     try {
         const { email, fname, lname, message } = req.body;
 

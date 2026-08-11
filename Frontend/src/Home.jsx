@@ -6,6 +6,8 @@ import { faRobot } from '@fortawesome/free-solid-svg-icons';
 import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
+import idTECHLOGO from './images/idtechlogo.png';
+
 function Home(){
 
     const [fname, setFname] = useState("");
@@ -82,7 +84,7 @@ function Home(){
                 <span style={{color: 'white', fontSize: '22px'}}>Some of my favorite things to do are to play video games and collect Star Wars light sabers. I also collect old roman/medieval armor and swords. Amongst all that I absolutely love the band AC/DC. They are my favourite band of all time. </span>
             </div>
 
-            <img width="800px" height="800px" src='src/images/idtechlogo.png'/>
+            <img width="800px" height="800px" src={idTECHLOGO}/>
         </div>
 
 
