@@ -1,0 +1,139 @@
+body{
+    background-color: black;
+    padding: 0px;
+    margin: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+
+.timeatidtech{
+    padding-left: 12%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.firsttime{
+    padding: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+.gdimage{
+    border-radius: 100px;
+    width: 400px;
+    height: 400px;
+}
+
+
+p{
+    color: rgb(244, 240, 240);
+}
+h1{
+    color: rgb(244, 240, 240);
+}
+span{
+    color: rgb(244, 240, 240);
+}
+
+.Projects{
+    display: flex;
+    gap: 30px;
+    padding: 50px;
+}
+
+.tech{
+    background-color: rgb(25, 25, 25);
+    border-radius: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+
+
+.audio {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    margin: 30px auto;
+}
+
+.audio h1 {
+    width: 300px;
+    margin: 0;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.audio audio {
+    width: 375px;
+}
+
+.navigation{
+    color: white;
+    background: none;
+    border: none;
+    transition-duration: 0.7s;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.navigation:hover{
+    background-color: greenyellow;
+    color: black;
+}
+
+.navbar{
+    background-color: rgb(32, 30, 30);
+    padding: 20px;
+    position: fixed !important;
+    width: 100%;
+    
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.innerbutton{
+    display: flex;
+    gap: 10px;
+}
+
+.bolt-icon {
+  color: rgba(214, 28, 28, 0.63) !important;
+}
+
+.submit_button{
+    background-color: rgb(78, 78, 78);
+    transition-duration: 0.5s;
+    color: white;
+}
+
+.submit_button:hover{
+    background-color: greenyellow;
+    color: black;
+}
