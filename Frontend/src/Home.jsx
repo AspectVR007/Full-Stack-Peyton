@@ -7,7 +7,7 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import idTECHLOGO from './images/idtechlogo.png';
+import myownPHOTO from './images/wphoto.jpg';
 import gameDESIGN from './images/firstclass.png';
 import vrDESIGN from './images/vrimage.png';
 import mineCRAFT from './images/mcimage.png';
@@ -21,14 +21,33 @@ import pixelGAME from './images/pixelSTARS.png';
 import tntAUDIO from './audio/TNT.mp3';
 import backinblackAUDIO from './audio/back in black.mp3';
 
-
+import WebThreads from './WebThreads.jsx';
 
 function Home(){
 
+
+    const [scrollYvalue, setScrollYvalue] = useState(0);
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+
+    window.addEventListener('scroll', () => {
+        setScrollYvalue(window.scrollY);
+    });
+
+
+    if(document.querySelector("#main_bg_div")){
+        if(scrollYvalue > 500){
+            const bg_element = document.querySelector("#main_bg_div");
+
+            bg_element.style.filter = "brightness(50%)";
+        } else {
+            const bg_element = document.querySelector("#main_bg_div");
+
+            bg_element.style.filter = "brightness(100%)";
+        }
+    }
 
     function gotoHome(){
         document.getElementById("homepage").scrollIntoView({behavior: "smooth"});
@@ -70,9 +89,10 @@ function Home(){
 
     }
 
-
+    //old spread val 0.42
     return (
         <>
+    
         <div className="navbar">
 
             <div className="innerbutton">
@@ -100,6 +120,33 @@ function Home(){
             </div>
             
         </div>
+
+        
+        <div id="main_bg_div" style={{ width: '100%', height: '600px', position: 'fixed', zIndex: '-1', height: '100vh', transitionDuration: '1.0s' }}>
+            <WebThreads
+                color1="#3700ff"
+                color2="#ffffff"
+                color3="#052e86"
+                speed={0.5}
+                threadCount={10}
+                frequency={5}
+                spread={0.22}
+                taper={0.95}
+                position={0.5}
+                fanMode="center"
+                glow={0.021}
+                falloff={0.6}
+                thickness={1.1}
+                brightness={0.65}
+                opacity={1}
+                mirror
+                shimmer={false}
+                grain
+                grainIntensity={0.05}
+                mouseInteraction={false}
+                mouseStrength={0.3}
+            />
+        </div>
         
         <div id="homepage" className="header">
 
@@ -108,7 +155,7 @@ function Home(){
                 <span style={{color: 'white', fontSize: '22px'}}>Some of my favorite things to do are to play video games and collect Star Wars light sabers. I also collect old roman/medieval armor and swords. Amongst all that I absolutely love the band AC/DC. They are my favourite band of all time. </span>
             </div>
 
-            <img width="800px" height="800px" src={idTECHLOGO}/>
+            <img width="700px" height="700px" style={{borderRadius: '50%'}} src={myownPHOTO}/>
         </div>
 
 
@@ -236,7 +283,7 @@ function Home(){
         <div className="audio">
 
              <h1>T.N.T</h1>
-            <audio style={{ backgroundColor: 'black' }} controls loop>
+            <audio controls loop>
                 <source src={tntAUDIO}></source>
             </audio>
 
@@ -270,12 +317,12 @@ function Home(){
             <form style={{ display: 'flex', flexDirection: 'column', width: '40%'}} onSubmit={submit_form}>
 
                 <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', width: '100%', gap: '12px', paddingBottom: '8px'}}>
-                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
                         <label htmlFor="fname" style={{color: 'white'}}>First Name: </label>
                         <input value={fname} style={{ backgroundColor: 'rgb(36, 36, 36)', border: 'none', color: 'white', borderRadius: '22px', padding: '8px' }} id='fname' name='fname' type="text" placeholder='John' onChange={(e) => setFname(e.target.value)}/>
                     </div>
 
-                    <div style={{display: 'flex', flexDirection: 'column'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', width: '100%'}}>
                         <label htmlFor="lname" style={{color: 'white'}}>Last Name: </label>
                         <input value={lname} style={{ backgroundColor: 'rgb(36, 36, 36)', border: 'none', color: 'white', borderRadius: '22px', padding: '8px' }} id='lname' name='lname' type="text" placeholder='Doe' onChange={(e) => setLname(e.target.value)}/>
                     </div>
