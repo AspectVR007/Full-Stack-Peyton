@@ -23,7 +23,10 @@ import backinblackAUDIO from './audio/back in black.mp3';
 
 import WebThreads from './WebThreads.jsx';
 
+
 function Home(){
+
+    
 
 
     const [scrollYvalue, setScrollYvalue] = useState(0);
@@ -69,10 +72,13 @@ function Home(){
         document.getElementById("contactme").scrollIntoView({behavior: "smooth"});
     }
 
+    const env_route_link = import.meta.env.VITE_ROUTE_LINK;
+    console.log(env_route_link);
+
     const submit_form = async (e) => {
         e.preventDefault();
 
-        const response = await fetch("http://localhost:5000/sendmail", {
+        const response = await fetch(`${env_route_link}/sendmail`, {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json",
